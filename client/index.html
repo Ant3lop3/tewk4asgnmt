@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medieval Scroll</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="title-background"></div>
+      <div class="dark fire">
+        <h1 class="Blazing">Ye Merchant Scroll</h1>
+      </div>
+    </header>
+    <form id="messagingForm" class="inputForm">
+      <input
+        id="speakerInput"
+        class="spkInput"
+        name="speaker"
+        placeholder="Your name my liege..."
+      />
+      <input
+        id="titleInput"
+        class="tilInput"
+        name="title"
+        placeholder="Son of, the Merciful, the Weaver..."
+      />
+      <input
+        id="townInput"
+        class="twnInput"
+        name="town"
+        placeholder="thy town where you reside..."
+      />
+      <input
+        id="steadInput"
+        class="stedInput"
+        name="stead"
+        placeholder="Thee name of ones stead..."
+      />
+      <!-- using textarea allows for big text boxes in forms: -->
+      <textarea
+        id="messageInput"
+        class="mesgInput"
+        name="message"
+        placeholder="State thy wares you wish to sell..."
+      >
+      </textarea>
+      <button class="subButton">Present</button>
+      <button
+        class="refreshButton"
+        type="button"
+        onclick="window.location.reload()"
+      >
+        Renew
+      </button>
+    </form>
+    <main>
+      <div id="scrollCont" class="dbCont">
+        <div class="messageOutput"></div>
+        <div class="likes-container">
+          <button class="likeButton"></button>
+          <button class="dislikeButton"></button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-background"></div>
+      <div class="dark fire">
+        <p class="Blazing">Caveat emptor © Medieval Scroll Est 1385</p>
+      </div>
+    </footer>
+  </body>
+</html>

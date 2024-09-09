@@ -1,0 +1,1251 @@
+* {
+    font-family: "MedievalSharp", cursive;
+    scroll-behavior: smooth;
+}
+
+/*! MAKE BASE TRAITS MOBILE SIZE OUTSIDE @MEDIA QUERIES. */
+@media (min-width: 370px) {
+    body {
+        margin: 5px;
+        background-image: url("/media/tapstry.webp");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        height: 15vh;
+    }
+    .dark.fire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        width: 78vw; /* or whatever width you prefer */
+        height: 7vh;
+        transform: translateY(-8px); /*this allows me to bring the box up, then lower height*/
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the end value for transparency */
+        z-index: 1;
+
+    }
+    
+    .Blazing {
+        display: flex;
+        margin: 0;
+        color: rgb(255, 115, 0);
+        font-size: 8vw;
+        line-height: 50px;
+        min-width: 50px;
+        outline: none;
+        vertical-align: middle;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+    
+
+    .inputForm {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        width: 70vw;
+        z-index: 3;
+        margin: 10px auto; /* adding the 'auto' keeps it centeralised where it is regarless of viewport */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .inputForm .spkInput{
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .tilInput{
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .twnInput{
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .stedInput{
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .mesgInput{
+        margin: 2px;
+        border-radius: 5px;
+        overflow-y: auto;  /* Adds vertical scrollbar */
+        resize: vertical;
+        text-align: left;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .inputForm .subButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .inputForm .refreshButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+
+    main {
+        flex: 1; /* Make the main content take up remaining space between header and footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .dbCont {
+        display: flex;
+        margin: 20px 0; /* Add margin to space out the posts */
+        top: auto;
+        color: antiquewhite;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 88vw;
+        padding: 15px; /* Adjust this value to control the thickness of the 'border' */
+        position: relative;
+    }
+
+    main .dbCont::before {  /*::before alls you to insert content before the element, no HTML needed */
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the end value for transparency */
+        z-index: -1;
+        border-radius: 10px; /* Optional: if you want rounded corners */
+    }
+
+    main .dbCont .introTxt {
+        padding: 4px;
+        border-top: 3px double antiquewhite;
+        border-right: 3px double antiquewhite;
+        border-bottom: 3px double antiquewhite;
+        border-left: 3px double antiquewhite;
+    }
+
+    main .dbCont .messageOutput{
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container .likeButton {
+        margin: 2px;
+        background-color: gold;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    main .dbCont .likes-container .dislikeButton {
+        margin: 2px;
+        background-color: rgb(107, 62, 28);
+        border-radius: 5px;
+        color: antiquewhite;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
+
+    footer .dark.fire {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .Blazing {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        color: rgb(255, 115, 0);
+        font-size: 2.5vw; /* Adjusted for footer */
+        line-height: 1.2;
+        min-width: 50px;
+        outline: none;
+        text-align: center;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+
+    .footer-background {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 52vw;
+        height: 2vh;
+        transform: translateY(-1px);
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+}
+
+@keyframes Blazing {
+    0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow; }
+    25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+      0 0 20px orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow; }
+    50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow,
+      2px -20px 30px rgba(255,255,0,0.5); }
+    75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      3px -5px 5px yellow,
+      -4px -10px 10px yellow,
+      2px -20px 30px rgba(255,255,0,0.5),
+      0px -25px 40px rgba(255,255,0,0)}
+    100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow; }
+}
+
+/*! LARGE MOBILES/SMALL TABLETS VERSION>>> */
+  /*? SMALLEST VP AT THE TOP  */
+@media (min-width: 640px) {
+    body {
+        margin: 5px;
+        background-image: url("/media/tapstry.webp");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        height: 15vh;
+    }
+    .dark.fire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        width: 78vw; /* or whatever width you prefer */
+        height: 7vh;
+        transform: translateY(-8px); /*this allows me to bring the box up, then lower height*/
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the end value for transparency */
+        z-index: 1;
+
+    }
+    
+    .Blazing {
+        display: flex;
+        margin: 0;
+        color: rgb(255, 115, 0);
+        font-size: 8vw;
+        line-height: 50px;
+        min-width: 50px;
+        outline: none;
+        vertical-align: middle;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+    
+
+    .inputForm {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        width: 70vw;
+        z-index: 3;
+        margin: 10px auto; /* adding the 'auto' keeps it centeralised where it is regarless of viewport */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .inputForm .spkInput{
+        width: 40vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .tilInput{
+        width: 40vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .twnInput{
+        width: 40vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .stedInput{
+        width: 40vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .mesgInput{
+        margin: 2px;
+        border-radius: 5px;
+        overflow-y: auto;  /* Adds vertical scrollbar */
+        resize: vertical;
+        text-align: left;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .inputForm .subButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .inputForm .refreshButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+
+    main {
+        flex: 1; /* Make the main content take up remaining space between header and footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .dbCont {
+        display: flex;
+        margin: 20px 0; /* Add margin to space out the posts */
+        top: auto;
+        color: antiquewhite;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 88vw;
+        padding: 15px; /* Adjust this value to control the thickness of the 'border' */
+        position: relative;
+    }
+
+    main .dbCont::before {  /*::before alls you to insert content before the element, no HTML needed */
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the end value for transparency */
+        z-index: -1;
+        border-radius: 10px; /* Optional: if you want rounded corners */
+    }
+
+    main .dbCont .introTxt {
+        padding: 4px;
+        border-top: 3px double antiquewhite;
+        border-right: 3px double antiquewhite;
+        border-bottom: 3px double antiquewhite;
+        border-left: 3px double antiquewhite;
+    }
+
+    main .dbCont .messageOutput{
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container .likeButton {
+        margin: 2px;
+        background-color: gold;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    main .dbCont .likes-container .dislikeButton {
+        margin: 2px;
+        background-color: rgb(107, 62, 28);
+        border-radius: 5px;
+        color: antiquewhite;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
+
+    footer .dark.fire {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .Blazing {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        color: rgb(255, 115, 0);
+        font-size: 2.5vw; /* Adjusted for footer */
+        line-height: 1.2;
+        min-width: 50px;
+        outline: none;
+        text-align: center;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+
+    .footer-background {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 52vw;
+        height: 2vh;
+        transform: translateY(-1px);
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+}
+/*! TABLETS/SMALL LAPTOPS VERSION>>> */
+@media (min-width: 768px) {
+    body {
+        margin: 5px;
+        background-image: url("/media/tapstry.webp");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        height: 15vh;
+    }
+    .dark.fire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        width: 78vw; /* or whatever width you prefer */
+        height: 10vh;
+        transform: translateY(-8px); /*this allows me to bring the box up, then lower height*/
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the end value for transparency */
+        z-index: 1;
+
+    }
+    
+    .Blazing {
+        display: flex;
+        margin: 0;
+        color: rgb(255, 115, 0);
+        font-size: 8vw;
+        line-height: 50px;
+        min-width: 50px;
+        outline: none;
+        vertical-align: middle;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+    
+
+    .inputForm {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        width: 70vw;
+        z-index: 3;
+        margin: 10px auto; /* adding the 'auto' keeps it centeralised where it is regarless of viewport */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .inputForm .spkInput{
+        width: 30vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .tilInput{
+        width: 30vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .twnInput{
+        width: 30vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .stedInput{
+        width: 30vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .mesgInput{
+        margin: 2px;
+        border-radius: 5px;
+        overflow-y: auto;  /* Adds vertical scrollbar */
+        resize: vertical;
+        text-align: left;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .inputForm .subButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .inputForm .refreshButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+
+    main {
+        flex: 1; /* Make the main content take up remaining space between header and footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .dbCont {
+        display: flex;
+        margin: 20px 0; /* Add margin to space out the posts */
+        top: auto;
+        color: antiquewhite;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 88vw;
+        padding: 15px; /* Adjust this value to control the thickness of the 'border' */
+        position: relative;
+    }
+
+    main .dbCont::before {  /*::before alls you to insert content before the element, no HTML needed */
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the end value for transparency */
+        z-index: -1;
+        border-radius: 10px; /* Optional: if you want rounded corners */
+    }
+
+    main .dbCont .introTxt {
+        padding: 4px;
+        border-top: 3px double antiquewhite;
+        border-right: 3px double antiquewhite;
+        border-bottom: 3px double antiquewhite;
+        border-left: 3px double antiquewhite;
+    }
+
+    main .dbCont .messageOutput{
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container .likeButton {
+        margin: 2px;
+        background-color: gold;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    main .dbCont .likes-container .dislikeButton {
+        margin: 2px;
+        background-color: rgb(107, 62, 28);
+        border-radius: 5px;
+        color: antiquewhite;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
+
+    footer .dark.fire {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .Blazing {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        color: rgb(255, 115, 0);
+        font-size: 2.5vw; /* Adjusted for footer */
+        line-height: 1.2;
+        min-width: 50px;
+        outline: none;
+        text-align: center;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+
+    .footer-background {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 52vw;
+        height: 2vh;
+        transform: translateY(-1px);
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        margin: 5px;
+        background-image: url("/media/tapstry.webp");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        height: 15vh;
+    }
+    .dark.fire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        width: 75vw; /* or whatever width you prefer */
+        height: 12vh;
+        transform: translateY(-8px); /*this allows me to bring the box up, then lower height*/
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the end value for transparency */
+        z-index: 1;
+
+    }
+    
+    .Blazing {
+        display: flex;
+        margin: 0;
+        color: rgb(255, 115, 0);
+        font-size: 8vw;
+        line-height: 50px;
+        min-width: 50px;
+        outline: none;
+        vertical-align: middle;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+    
+
+    .inputForm {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        width: 70vw;
+        z-index: 3;
+        margin: 10px auto; /* adding the 'auto' keeps it centeralised where it is regarless of viewport */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .inputForm .spkInput{
+        width: 22vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .tilInput{
+        width: 22vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .twnInput{
+        width: 22vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .stedInput{
+        width: 22vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .mesgInput{
+        margin: 2px;
+        border-radius: 5px;
+        overflow-y: auto;  /* Adds vertical scrollbar */
+        resize: vertical;
+        text-align: left;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .inputForm .subButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .inputForm .refreshButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+
+    main {
+        flex: 1; /* Make the main content take up remaining space between header and footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .dbCont {
+        display: flex;
+        margin: 20px 0; /* Add margin to space out the posts */
+        top: auto;
+        color: antiquewhite;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 88vw;
+        padding: 15px; /* Adjust this value to control the thickness of the 'border' */
+        position: relative;
+    }
+
+    main .dbCont::before {  /*::before alls you to insert content before the element, no HTML needed */
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the end value for transparency */
+        z-index: -1;
+        border-radius: 10px; /* Optional: if you want rounded corners */
+    }
+
+    main .dbCont .introTxt {
+        padding: 4px;
+        border-top: 3px double antiquewhite;
+        border-right: 3px double antiquewhite;
+        border-bottom: 3px double antiquewhite;
+        border-left: 3px double antiquewhite;
+    }
+
+    main .dbCont .messageOutput{
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container .likeButton {
+        margin: 2px;
+        background-color: gold;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    main .dbCont .likes-container .dislikeButton {
+        margin: 2px;
+        background-color: rgb(107, 62, 28);
+        border-radius: 5px;
+        color: antiquewhite;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
+
+    footer .dark.fire {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .Blazing {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        color: rgb(255, 115, 0);
+        font-size: 2.5vw; /* Adjusted for footer */
+        line-height: 1.2;
+        min-width: 50px;
+        outline: none;
+        text-align: center;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+
+    .footer-background {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 52vw;
+        height: 2vh;
+        transform: translateY(-1px);
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+}
+
+/*? LARGEST VP AT THE BOTTOM */
+@media (min-width: 1280px) {
+    body {
+        margin: 5px;
+        background-image: url("/media/tapstry.webp");
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        height: 15vh;
+    }
+    .dark.fire {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .title-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        width: 46vw; /* or whatever width you prefer */
+        height: 11vh;
+        transform: translateY(-8px); /*this allows me to bring the box up, then lower height*/
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8); /* Adjust the end value for transparency */
+        z-index: 1;
+
+    }
+    
+    .Blazing {
+        display: flex;
+        margin: 0;
+        color: rgb(255, 115, 0);
+        font-size: 5vw;
+        line-height: 50px;
+        min-width: 50px;
+        outline: none;
+        vertical-align: middle;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+    
+
+    .inputForm {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        flex-direction: column;
+        width: 70vw;
+        z-index: 3;
+        margin: 10px auto; /* adding the 'auto' keeps it centeralised where it is regarless of viewport */
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .inputForm .spkInput{
+        width: 12vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .tilInput{
+        width: 12vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .twnInput{
+        width: 12vw;
+        margin:2px;
+        border-radius: 5px ;
+    }
+
+    .inputForm .stedInput{
+        width: 12vw;
+        margin:2px;
+        border-radius: 5px;
+    }
+
+    .inputForm .mesgInput{
+        margin: 2px;
+        border-radius: 5px;
+        overflow-y: auto;  /* Adds vertical scrollbar */
+        resize: vertical;
+        text-align: left;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .inputForm .subButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .inputForm .refreshButton {
+        margin: 2px;
+        width: 5rem;
+        background-color: antiquewhite;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+
+    main {
+        flex: 1; /* Make the main content take up remaining space between header and footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .dbCont {
+        display: flex;
+        margin: 20px 0; /* Add margin to space out the posts */
+        top: auto;
+        color: antiquewhite;
+        flex-direction: column;
+        align-items: center;
+        width: 88vw;
+        padding: 15px; /* Adjust this value to control the thickness of the 'border' */
+        position: relative;
+    }
+
+    main .dbCont::before {  /*::before alls you to insert content before the element, no HTML needed */
+        
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 9.5vw;
+        right: 9.5vw;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the end value for transparency */
+        z-index: -1;
+        border-radius: 10px; /* Optional: if you want rounded corners */
+    }
+
+    main .dbCont .introTxt {
+        padding: 4px;
+        border-top: 3px double antiquewhite;
+        border-right: 3px double antiquewhite;
+        border-bottom: 3px double antiquewhite;
+        border-left: 3px double antiquewhite;
+    }
+
+    main .dbCont .messageOutput{
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px;
+    }
+
+    main .dbCont .likes-container .likeButton {
+        margin: 2px;
+        background-color: gold;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    main .dbCont .likes-container .dislikeButton {
+        margin: 2px;
+        background-color: rgb(107, 62, 28);
+        border-radius: 5px;
+        color: antiquewhite;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 9vh;
+    }
+
+    footer .dark.fire {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .Blazing {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+        color: rgb(255, 115, 0);
+        font-size: 2.5vw; /* Adjusted for footer */
+        line-height: 1.2;
+        min-width: 50px;
+        outline: none;
+        text-align: center;
+        text-shadow:
+            0 3px 20px red,
+            0 0 20px red,
+            0 0 10px orange,
+            4px -5px 6px yellow,
+            -4px -10px 10px yellow,
+            0 -10px 30px yellow;
+        animation: 2s Blazing infinite alternate linear;
+    }
+
+    .footer-background {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 52vw;
+        height: 2vh;
+        transform: translateY(-1px);
+        border-radius: 8px 8px 8px 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+}
+
+
+
