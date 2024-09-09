@@ -3,7 +3,7 @@ const scrollContainer = document.getElementById("scrollCont");
 
 //! now we fetch the db data from the server (which in turn the server gets from the db)
 async function getMedievalScroll() {
-    const response = await fetch ("https://tewk4asgnmt-1.onrender.com/medievalscroll"); //<<change URL on deployment
+    const response = await fetch ("https://tewk4asgnmt.onrender.com/medievalscroll"); //<<change URL on deployment
     const data = await response.json();
     console.log(data);
 
@@ -46,14 +46,14 @@ async function getMedievalScroll() {
 }
 
 async function handleLike(messageId) {
-    await fetch(`https://tewk4asgnmt-1.onrender.com/medievalscroll/${messageId}/like`, {
+    await fetch(`https://tewk4asgnmt.onrender.com/medievalscroll/${messageId}/like`, {
         method: 'POST'
     });
     getMedievalScroll(); // Refresh the messages to show updated like count
 }
 
 async function handleDislike(messageId) {
-    await fetch(`https://tewk4asgnmt-1.onrender.com/medievalscroll/${messageId}/dislike`, {
+    await fetch(`https://tewk4asgnmt.onrender.com/medievalscroll/${messageId}/dislike`, {
         method: 'POST'
     });
     getMedievalScroll(); // Refresh the messages to show updated dislike count
@@ -71,7 +71,7 @@ async function handlePostMessages(event) {
     const formData = new FormData(form)
     const data = Object.fromEntries(formData)
     console.log(data)
-    await fetch("https://tewk4asgnmt-1.onrender.com/medievalscroll", {
+    await fetch("https://tewk4asgnmt.onrender.com/medievalscroll", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
